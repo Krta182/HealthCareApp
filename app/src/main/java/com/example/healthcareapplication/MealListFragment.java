@@ -21,7 +21,7 @@ public class MealListFragment extends ListFragment {
 
 
     @Override
-    public View onCreateView( LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         setListAdapter(new ArrayAdapter<Meal>(
                 inflater.getContext(), android.R.layout.simple_list_item_1, Meal.meals
         ));

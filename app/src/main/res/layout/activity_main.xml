@@ -21,7 +21,7 @@
 
 
     <fragment
-        android:id="@+id/List_Fragment"
+        android:id="@+id/Meal_list_Fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.example.healthcareapplication.MealListFragment"/>

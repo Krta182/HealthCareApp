@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements IListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,4 +45,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public void itemClicked(long id) {
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(DetailActivity.EXTRA_MEAL_ID, (int) id);
+        startActivity(intent);
+    }
 }
+
+
