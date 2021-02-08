@@ -1,0 +1,43 @@
+package com.example.healthcareapplication;
+
+import androidx.annotation.NonNull;
+
+import java.text.DateFormat;
+import java.util.Date;
+
+public class Meal {
+    private String mealName;
+    private String calories;
+    Date date=new Date();
+    private String mealDate = DateFormat.getDateInstance().format(date);
+
+
+    public static final Meal[] meals = {
+            new Meal("Steak", "400","10-02-2020"),
+            new Meal("Chicken", "300","11-01-2020"),
+            new Meal("Banana", "50","12-03-2020"),
+            new Meal("Yogurt", "40","09-02-2020")
+    };
+
+    public Meal(String mealName, String calories,String mealDate) {
+        this.mealName = mealName;
+        this.calories = calories;
+        this.mealDate=mealDate;
+    }
+
+    public String getMealName() {
+        return mealName;
+    }
+    public String getCalories() {
+        return calories;
+    }
+    public String getMealDate(){
+        return mealDate;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.mealName;
+    }
+}

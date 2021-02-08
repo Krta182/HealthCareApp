@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HealthCareApp</string>
+    <string name="Add_Meal">Add meal</string>
+    <string name="add_meal_title">Add Meal</string>
+    <string name="meal_title">Meal</string>
+    <string name="meal_hint">Add meal</string>
+    <string name="calories_title">Calories</string>
+    <string name="calories_hint">Number of calories</string>
+    <string name="button_save_meal_text">Save</string>
+    <string name="button_cancel_meal_text">Cancel</string>
+    <string name="MealDate">Meal date:</string>
+
+
+
+</resources>
