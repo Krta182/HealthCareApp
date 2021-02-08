@@ -21,7 +21,7 @@ public class MealDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_meal_detail, container, false);
+        return inflater.inflate(R.layout.fragment_meal_detail, container, true);
     }
 
     @Override
@@ -34,11 +34,11 @@ public class MealDetailFragment extends Fragment {
             TextView title = view.findViewById(R.id.textBoxTitle);
             title.setText(meal.getMealName());
 
-            TextView description = view.findViewById(R.id.textBoxCalories);
-            description.setText(meal.getCalories());
+            TextView calories = view.findViewById(R.id.textBoxCalories);
+            calories.setText(meal.getCalories());
 
             TextView date = view.findViewById(R.id.textBoxDate);
-            description.setText(meal.getMealDate());
+            date.setText(meal.getMealDate());
         }
     }
 

@@ -16,15 +16,16 @@
             android:id="@+id/toolbar"
             layout="@layout/toolbar_main" />
 
+        <fragment
+            android:id="@+id/Meal_list_Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.healthcareapplication.MealListFragment"/>
 
     </LinearLayout>
 
 
-    <fragment
-        android:id="@+id/Meal_list_Fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.example.healthcareapplication.MealListFragment"/>
+
 
 
 
