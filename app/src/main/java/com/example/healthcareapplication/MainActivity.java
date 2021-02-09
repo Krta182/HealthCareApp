@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity  implements IListener{
 
 
 
+
     }
 
 
@@ -51,6 +52,11 @@ public class MainActivity extends AppCompatActivity  implements IListener{
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_MEAL_ID, (int) id);
         startActivity(intent);
+    }
+
+    @Override
+    public void OnLongItemClick(long id) {
+
     }
 }
 

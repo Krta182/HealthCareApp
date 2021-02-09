@@ -21,7 +21,7 @@ public class MealDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_meal_detail, container, true);
+        return inflater.inflate(R.layout.fragment_meal_detail, container, false);
     }
 
     @Override
