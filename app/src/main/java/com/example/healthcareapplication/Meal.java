@@ -1,11 +1,14 @@
 package com.example.healthcareapplication;
 
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
 
 import java.text.DateFormat;
 import java.util.Date;
 
+@Entity(tableName = "meal")
 public class Meal {
+    private Integer _id;
     private String mealName;
     private String calories;
     Date date=new Date();
@@ -28,11 +31,26 @@ public class Meal {
     public String getMealName() {
         return mealName;
     }
+    public void setMealName(String mealName) {
+        this.mealName = mealName;
+    }
     public String getCalories() {
         return calories;
     }
+    public void setCalories(String calories) {
+        this.calories = calories;
+    }
     public String getMealDate(){
         return mealDate;
+    }
+    public void setMealDate(String mealDate) {
+        this.mealDate = mealDate;
+    }
+    public Integer get_id() {
+        return _id;
+    }
+    public void set_id(Integer _id) {
+        this._id = _id;
     }
 
     @NonNull
