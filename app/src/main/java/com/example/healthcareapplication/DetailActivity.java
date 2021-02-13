@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,5 +49,6 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView date = findViewById(R.id.textBoxDate);
         date.setText(meal.getMealDate());
+
     }
 }

@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,22 +16,16 @@ public class Meal {
     private Integer _id;
     private String mealName;
     private String calories;
-    /*
-    Date date = Calendar.getInstance().getTime();
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
-    String mealDate = dateFormat.format(date);
-*/
-
-
+    private Date mealDate;
 
     public static final Meal[] meals = {
-            new Meal("Steak", "400Ca","2020-02-20"),
-            new Meal("Chicken", "300Ca","2020-03-10"),
-            new Meal("Banana", "50Ca","2020-04-15"),
-            new Meal("Yogurt", "40Ca","2020-08-28")
+            new Meal("Steak", "400Ca",Date.from(Instant.parse("2020-03-10"))),
+            new Meal("Chicken", "300Ca",Date.from(Instant.parse("2020-02-16"))),
+            new Meal("Banana", "50Ca",Date.from(Instant.parse("2020-08-15"))),
+            new Meal("Yogurt", "40Ca",Date.from(Instant.parse("2020-01-12")))
     };
 
-    public Meal(String mealName, String calories,String  mealDate) {
+    public Meal(String mealName, String calories,Date mealDate) {
         this.mealName = mealName;
         this.calories = calories;
         this.mealDate=mealDate;
@@ -48,10 +43,10 @@ public class Meal {
     public void setCalories(String calories) {
         this.calories = calories;
     }
-    public String getMealDate(){
+    public Date getMealDate(){
         return mealDate;
     }
-    public void setMealDate(String mealDate) {
+    public void setMealDate(Date mealDate) {
         this.mealDate = mealDate;
     }
     public Integer get_id() {

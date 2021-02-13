@@ -9,7 +9,7 @@
     <string name="button_save_meal_text">Save</string>
     <string name="button_cancel_meal_text">Cancel</string>
     <string name="MealDate">Meal date:</string>
-
+    <string name="date_hint">Pick date</string>
 
 
 </resources>

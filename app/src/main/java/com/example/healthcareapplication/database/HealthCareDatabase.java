@@ -6,14 +6,17 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import com.example.healthcareapplication.Converters;
 import com.example.healthcareapplication.Meal;
 import com.example.healthcareapplication.dao.MealDao;
 
 import java.util.concurrent.Executors;
 
 @Database(entities = {Meal.class}, exportSchema = false, version = 1)
+@TypeConverters({Converters.class})
 public abstract class HealthCareDatabase extends RoomDatabase {
     private static final String DATABASE_NAME = "db_healthCare";
     private static HealthCareDatabase healthCareDatabase;

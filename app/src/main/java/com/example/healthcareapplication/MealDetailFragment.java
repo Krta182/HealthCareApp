@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -37,7 +38,7 @@ public class MealDetailFragment extends Fragment {
             TextView calories = view.findViewById(R.id.textBoxCalories);
             calories.setText(meal.getCalories());
 
-            TextView date = view.findViewById(R.id.textBoxDate);
+           TextView date = view.findViewById(R.id.textBoxDate);
             date.setText(meal.getMealDate());
         }
     }
