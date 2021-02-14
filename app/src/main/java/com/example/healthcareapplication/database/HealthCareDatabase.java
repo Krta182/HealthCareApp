@@ -30,13 +30,13 @@ public abstract class HealthCareDatabase extends RoomDatabase {
                             Executors.newSingleThreadScheduledExecutor().execute(new Runnable() {
                                 @Override
                                 public void run() {
-                                    String firstRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", %d)",
+                                    String firstRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
                                             Meal.meals[0].getMealName(), Meal.meals[0].getCalories(), Meal.meals[0].getMealDate());
-                                    String secondRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", %d)",
+                                    String secondRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
                                             Meal.meals[1].getMealName(), Meal.meals[1].getCalories(), Meal.meals[0].getMealDate());
-                                    String thirdRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", %d)",
+                                    String thirdRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
                                             Meal.meals[2].getMealName(), Meal.meals[2].getCalories(), Meal.meals[0].getMealDate());
-                                    String fourthRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", %d)",
+                                    String fourthRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
                                             Meal.meals[3].getMealName(), Meal.meals[3].getCalories(), Meal.meals[0].getMealDate());
                                     db.execSQL(firstRow);
                                     db.execSQL(secondRow);

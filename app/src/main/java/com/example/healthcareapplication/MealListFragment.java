@@ -12,8 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.ListFragment;
 
+import com.example.healthcareapplication.database.HealthCareDatabase;
+
 public class MealListFragment extends ListFragment {
     private IListener listener;
+    private HealthCareDatabase healthCareDatabase;
 
     public MealListFragment() {
         // Required empty public constructor
@@ -22,7 +25,8 @@ public class MealListFragment extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        setListAdapter(new ArrayAdapter<Meal>(
+
+        setListAdapter(new ArrayAdapter<>(
                 inflater.getContext(), android.R.layout.simple_list_item_1, Meal.meals
         ));
         return super.onCreateView(inflater, container, savedInstanceState);

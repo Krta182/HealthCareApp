@@ -38,8 +38,8 @@ public class MealDetailFragment extends Fragment {
             TextView calories = view.findViewById(R.id.textBoxCalories);
             calories.setText(meal.getCalories());
 
-           TextView date = view.findViewById(R.id.textBoxDate);
-            date.setText(meal.getMealDate());
+            TextView date = view.findViewById(R.id.textBoxDate);
+            date.setText(DateHelper.dateToString(meal.getMealDate()));
         }
     }
 

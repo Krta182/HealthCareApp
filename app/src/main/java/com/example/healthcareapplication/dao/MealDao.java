@@ -6,6 +6,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 
 import com.example.healthcareapplication.Meal;
@@ -24,6 +25,7 @@ public interface MealDao {
 
     @Query("SELECT * FROM meal WHERE _id = :id")
     Meal findById(Integer id);
+
 
     @Insert
     void insertMeal(Meal meal);

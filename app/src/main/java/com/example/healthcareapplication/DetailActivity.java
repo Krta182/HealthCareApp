@@ -2,14 +2,19 @@ package com.example.healthcareapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.CalendarView;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.healthcareapplication.database.HealthCareDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.concurrent.Executors;
 
 public class DetailActivity extends AppCompatActivity {
@@ -48,7 +53,10 @@ public class DetailActivity extends AppCompatActivity {
         calories.setText(meal.getCalories());
 
         TextView date = findViewById(R.id.textBoxDate);
-        date.setText(meal.getMealDate());
+        date.setText(DateHelper.dateToString(meal.getMealDate()));
+
+
 
     }
+
 }

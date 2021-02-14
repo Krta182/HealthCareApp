@@ -31,6 +31,11 @@ public class Meal {
         this.mealDate=mealDate;
     }
 
+    public Meal()
+    {
+
+    }
+
     public String getMealName() {
         return mealName;
     }

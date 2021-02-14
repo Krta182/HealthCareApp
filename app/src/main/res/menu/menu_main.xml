@@ -6,9 +6,17 @@
         android:id="@+id/action_create_meal"
         android:icon="@drawable/ic_add_white"
         android:title="@string/add_meal_title"
-        android:orderInCategory="1"
+        android:orderInCategory="2"
         android:visible="true"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_show_date"
+        android:title="@string/Main_Act_DateTitle"
+        android:orderInCategory="1"
+        android:visible="true"
+        app:showAsAction="ifRoom"
+        />
 
 
 
