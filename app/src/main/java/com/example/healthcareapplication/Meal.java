@@ -19,10 +19,10 @@ public class Meal {
     private Date mealDate;
 
     public static final Meal[] meals = {
-            new Meal("Steak", "400Ca",Date.from(Instant.parse("2020-03-10"))),
-            new Meal("Chicken", "300Ca",Date.from(Instant.parse("2020-02-16"))),
-            new Meal("Banana", "50Ca",Date.from(Instant.parse("2020-08-15"))),
-            new Meal("Yogurt", "40Ca",Date.from(Instant.parse("2020-01-12")))
+            new Meal("Steak", "400Ca",DateHelper.stringToDate("2020-02-14")),
+            new Meal("Chicken", "300Ca",DateHelper.stringToDate("2020-01-13")),
+            new Meal("Banana", "50Ca",DateHelper.stringToDate("2020-07-12")),
+            new Meal("Yogurt", "40Ca",DateHelper.stringToDate("2020-06-09"))
     };
 
     public Meal(String mealName, String calories,Date mealDate) {

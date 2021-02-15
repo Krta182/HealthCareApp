@@ -71,10 +71,6 @@ public class CreateMealActivity extends AppCompatActivity{
         String mealdate=date.getText().toString();
         DateHelper.stringToDate(mealdate);
 
-
-        saveMeal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 if(mealname.isEmpty()) {
                     Toast.makeText(CreateMealActivity.this, "This is required field.Please fill in the meal name,", Toast.LENGTH_SHORT).show();
                 }
@@ -90,12 +86,10 @@ public class CreateMealActivity extends AppCompatActivity{
                 else {
                     new InsertMealAsyncTask().execute(mealname,mealcalories,mealdate);
                     Toast.makeText(CreateMealActivity.this, "You added meal!", Toast.LENGTH_SHORT).show();
-
+                    finish();
                 }
-            }
-        });
 
-        finish();
+
 
     }
 

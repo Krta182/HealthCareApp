@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private HealthCareDatabase healthCareDatabase;
     private Cursor mealCursor;
 
+    private EditText DatePicker;
+    private Button DisplayBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
         new MealListAsyncTask(this, false).execute();
 
 
-
-
     }
     @Override
     protected void onRestart() {
@@ -65,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         healthCareDatabase= HealthCareDatabase.getInstance(MainActivity.this);
         new MealListAsyncTask(this, true).execute();
     }
+
+
 
     public class MealListAsyncTask extends AsyncTask<Void, Void, Cursor> {
         Context context;
@@ -128,6 +132,11 @@ public class MainActivity extends AppCompatActivity {
                     return super.onOptionsItemSelected(item);
             }
         }
+
+
+
+
+
 
 }
 

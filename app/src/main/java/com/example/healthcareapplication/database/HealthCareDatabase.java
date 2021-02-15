@@ -31,13 +31,13 @@ public abstract class HealthCareDatabase extends RoomDatabase {
                                 @Override
                                 public void run() {
                                     String firstRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
-                                            Meal.meals[0].getMealName(), Meal.meals[0].getCalories(), Meal.meals[0].getMealDate());
+                                            Meal.meals[0].getMealName(), Meal.meals[0].getCalories(), Meal.meals[0].getMealDate().getTime());
                                     String secondRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
-                                            Meal.meals[1].getMealName(), Meal.meals[1].getCalories(), Meal.meals[0].getMealDate());
+                                            Meal.meals[1].getMealName(), Meal.meals[1].getCalories(), Meal.meals[0].getMealDate().getTime());
                                     String thirdRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
-                                            Meal.meals[2].getMealName(), Meal.meals[2].getCalories(), Meal.meals[0].getMealDate());
+                                            Meal.meals[2].getMealName(), Meal.meals[2].getCalories(), Meal.meals[0].getMealDate().getTime());
                                     String fourthRow = String.format("INSERT INTO meal(\"mealName\", \"calories\", \"mealDate\") VALUES(\"%s\", \"%s\", \"%s\")",
-                                            Meal.meals[3].getMealName(), Meal.meals[3].getCalories(), Meal.meals[0].getMealDate());
+                                            Meal.meals[3].getMealName(), Meal.meals[3].getCalories(), Meal.meals[0].getMealDate().getTime());
                                     db.execSQL(firstRow);
                                     db.execSQL(secondRow);
                                     db.execSQL(thirdRow);
