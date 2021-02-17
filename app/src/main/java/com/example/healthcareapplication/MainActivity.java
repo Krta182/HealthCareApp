@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText DatePicker;
     private Button DisplayBtn;
 
+    private long mealId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ListView listView = findViewById(R.id.Meal_list);
-
-
 
         healthCareDatabase=HealthCareDatabase.getInstance(MainActivity.this);
         new MealListAsyncTask(this, false).execute();
@@ -105,14 +104,20 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+                listMeals.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                        healthCareDatabase=HealthCareDatabase.getInstance(MainActivity.this);
+                        healthCareDatabase.mealDao().deleteMeal(Meal.meals[(int)id]);
+                        return false;
+                    }
+                });
             }else {
                 SimpleCursorAdapter adapter = (SimpleCursorAdapter) listMeals.getAdapter();
                 adapter.changeCursor(mealCursor);
             }
         }
     }
-
-
 
         @Override
         public boolean onCreateOptionsMenu (Menu menu){
@@ -132,11 +137,6 @@ public class MainActivity extends AppCompatActivity {
                     return super.onOptionsItemSelected(item);
             }
         }
-
-
-
-
-
 
 }
 
