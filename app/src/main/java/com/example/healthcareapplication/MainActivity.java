@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
                 listMeals.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                        healthCareDatabase=HealthCareDatabase.getInstance(MainActivity.this);
-                        healthCareDatabase.mealDao().deleteMeal(Meal.meals[(int)id]);
+                       // healthCareDatabase=HealthCareDatabase.getInstance(MainActivity.this);
+                       // healthCareDatabase.mealDao().deleteMeal(Meal.meals[(int)id]);
                         return false;
                     }
                 });
